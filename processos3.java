@@ -10,6 +10,8 @@ public class processos3{
         int h = 0;
         int y = 0;
 
+        boolean triggerY = false;
+
         for(;i < myNum1.length; i++){
 
             if(myNum1[i] < 0){
@@ -27,16 +29,23 @@ public class processos3{
 
                         System.out.println("P2: "+myNum2[h]);
 
-                        for(; y < myNum2.length; y++){
+                        for(; y < myNum2.length && triggerY == false ; y++){
+
+                            //System.out.println("============");
+                            //System.out.println("y: "+triggerY);
+                            //System.out.println("============");
                             
                             if(myNum3[y] > 0){
 
-                                System.out.println("P3: "+myNum3[y]);
-                                continue;
+                                System.out.println("P3: "+myNum3[y]);                        
+                                
 
                             }else if(myNum3[y] < 0){
 
                                 System.out.println("P3: "+myNum3[y]);
+
+                                triggerY = true;
+
                                 break;
 
 
@@ -46,14 +55,26 @@ public class processos3{
 
                     }
 
-                }
+                    if(myNum3[y] < 0){
 
+                        System.out.println("Pulou");
+                        
+                        break;  
+
+                    }
+                    
+
+                }
+                
+                
+            
+            
             }else if(myNum1[i] > 0){
 
                 System.out.println("P1: "+myNum1[i]);
 
-            }
             
+            }
             
             if(i == (myNum1.length - 1)){
 
@@ -63,18 +84,16 @@ public class processos3{
 
                     System.out.println("P2: "+myNum2[h]);
 
-                    System.out.println("H: "+h);
+                    //System.out.println("H: "+h);
           
-                }
+                };
 
-                
-
-            }
+            };
             
             
 
 
-        }
+        };
 
         /*
             System.out.println(" ");
@@ -83,6 +102,7 @@ public class processos3{
             System.out.println(h);
         */
 
-    }
+        }
 
 }
+
