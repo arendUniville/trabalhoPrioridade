@@ -30,10 +30,6 @@ public class processos3{
                         System.out.println("P2: "+myNum2[h]);
 
                         for(; y < myNum2.length && triggerY == false ; y++){
-
-                            //System.out.println("============");
-                            //System.out.println("y: "+triggerY);
-                            //System.out.println("============");
                             
                             if(myNum3[y] > 0){
 
@@ -66,7 +62,7 @@ public class processos3{
 
                 }
                 
-                
+            triggerY = false;
             
             
             }else if(myNum1[i] > 0){
@@ -85,15 +81,25 @@ public class processos3{
                     System.out.println("P2: "+myNum2[h]);
 
                     //System.out.println("H: "+h);
+
+                    if(h == (myNum2.length - 1)){
+
+                        y = y + 1;
+    
+                        for(; y < myNum2.length && triggerY == false ; y++){
+                                
+                            System.out.println("P3: "+myNum3[y]);                        
+                                
+                        }
+                    }
           
-                };
+                }
 
-            };
-            
-            
+                
 
+            }
 
-        };
+        }
 
         /*
             System.out.println(" ");
